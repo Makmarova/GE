@@ -1,3 +1,4 @@
-Clone the repository https://github.com/Makmarova/GE
+1.Clone the repository https://github.com/Makmarova/GE
 
-Result report can be found \uncommitted\data_docs\local_site\index.html , report example on the screen "report example.png"
+2.Result report can be found here \uncommitted\data_docs\local_site\index.html
+Report example on the screen "report example.png"
