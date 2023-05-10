@@ -1,0 +1,1723 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "hr.countries",
+      "data_connector_name": "default_inferred_data_connector_name",
+      "datasource_name": "test_datasource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230510T202927.777906Z"
+    },
+    "batch_spec": {
+      "batch_identifiers": {},
+      "data_asset_name": "hr.countries",
+      "data_asset_name_prefix": "",
+      "data_asset_name_suffix": "",
+      "include_schema_name": true,
+      "schema_name": "hr",
+      "table_name": "countries",
+      "type": "table"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "test_checkpoint",
+    "expectation_suite_name": "employees_suite",
+    "great_expectations_version": "0.16.11",
+    "run_id": {
+      "run_name": "20230510-202927-my-run-name-template",
+      "run_time": "2023-05-10T22:29:27.675314+02:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230510T202927.818088Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"last_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"last_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"last_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "last_name"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "last_name"
+              },
+              "metric_name": "column_values.unique.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"last_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"last_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"last_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "last_name"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "last_name"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"last_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"last_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"last_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "last_name",
+          "mostly": 1.0,
+          "value_set": [
+            "Russell",
+            "Urman",
+            "Grant",
+            "Mikkilineni",
+            "Fay",
+            "Hartstein",
+            "Partners",
+            "Bell",
+            "Raphaely",
+            "Ernst",
+            "Higgins",
+            "Popp",
+            "Taylor",
+            "Faviet",
+            "Whalen",
+            "Chen",
+            "King",
+            "De Haan",
+            "Lorentz",
+            "Everett",
+            "Hunold",
+            "Vollman",
+            "Baer",
+            "Tobias",
+            "Kochhar",
+            "Weiss",
+            "Fripp",
+            "Sciarra",
+            "Austin",
+            "Himuro",
+            "Khoo",
+            "Mavris",
+            "Livingston",
+            "Colmenares",
+            "Pataballa",
+            "Johnson",
+            "Baida",
+            "Kaufling",
+            "Greenberg",
+            "Gietz"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "last_name"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"last_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"last_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"last_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "last_name",
+          "max_value": 40,
+          "min_value": 40,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "last_name"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"last_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"last_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"last_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "last_name",
+          "max_value": 1.0,
+          "min_value": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "last_name"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"last_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"last_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"last_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "last_name",
+          "max_value": 1.0,
+          "min_value": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "last_name"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"email\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"email\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"email\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "email"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "email"
+              },
+              "metric_name": "column_values.unique.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"email\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"email\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"email\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "email"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "email"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"email\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"email\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"email\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "email",
+          "mostly": 1.0,
+          "value_set": [
+            "michael.hartstein@sqltutorial.org",
+            "shelley.higgins@sqltutorial.org",
+            "luis.popp@sqltutorial.org",
+            "jose manuel.urman@sqltutorial.org",
+            "jonathon.taylor@sqltutorial.org",
+            "adam.fripp@sqltutorial.org",
+            "alexander.khoo@sqltutorial.org",
+            "alexander.hunold@sqltutorial.org",
+            "susan.mavris@sqltutorial.org",
+            "david.austin@sqltutorial.org",
+            "pat.fay@sqltutorial.org",
+            "nancy.greenberg@sqltutorial.org",
+            "sarah.bell@sqltutorial.org",
+            "sigal.tobias@sqltutorial.org",
+            "steven.king@sqltutorial.org",
+            "karen.partners@sqltutorial.org",
+            "matthew.weiss@sqltutorial.org",
+            "daniel.faviet@sqltutorial.org",
+            "neena.kochhar@sqltutorial.org",
+            "ismael.sciarra@sqltutorial.org",
+            "jack.livingston@sqltutorial.org",
+            "jennifer.whalen@sqltutorial.org",
+            "lex.de haan@sqltutorial.org",
+            "britney.everett@sqltutorial.org",
+            "guy.himuro@sqltutorial.org",
+            "hermann.baer@sqltutorial.org",
+            "irene.mikkilineni@sqltutorial.org",
+            "den.raphaely@sqltutorial.org",
+            "kimberely.grant@sqltutorial.org",
+            "bruce.ernst@sqltutorial.org",
+            "john.russell@sqltutorial.org",
+            "karen.colmenares@sqltutorial.org",
+            "shelli.baida@sqltutorial.org",
+            "payam.kaufling@sqltutorial.org",
+            "charles.johnson@sqltutorial.org",
+            "shanta.vollman@sqltutorial.org",
+            "valli.pataballa@sqltutorial.org",
+            "john.chen@sqltutorial.org",
+            "diana.lorentz@sqltutorial.org",
+            "william.gietz@sqltutorial.org"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "email"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"email\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"email\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"email\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "email",
+          "max_value": 40,
+          "min_value": 40,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "email"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"email\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"email\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"email\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "email",
+          "max_value": 1.0,
+          "min_value": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "email"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"email\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"email\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"email\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "email",
+          "max_value": 1.0,
+          "min_value": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "email"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"phone_number\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"phone_number\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"phone_number\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "phone_number"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "phone_number"
+              },
+              "metric_name": "column_values.unique.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"phone_number\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"phone_number\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"phone_number\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "phone_number",
+          "mostly": 1.0,
+          "value_set": [
+            "515.124.4269",
+            "590.423.5567",
+            "590.423.4569",
+            "515.124.4469",
+            "515.123.4568",
+            "650.123.2234",
+            "515.127.4561",
+            "650.123.3234",
+            "515.123.7777",
+            "515.123.4444",
+            "515.123.4567",
+            "515.127.4562",
+            "515.123.8888",
+            "515.127.4565",
+            "650.501.2876",
+            "603.123.6666",
+            "515.124.4569",
+            "515.123.5555",
+            "650.123.1234",
+            "590.423.4568",
+            "515.124.4567",
+            "515.127.4563",
+            "590.423.4560",
+            "515.124.4369",
+            "515.123.4569",
+            "515.127.4564",
+            "590.423.4567",
+            "650.123.4234",
+            "515.124.4169",
+            "515.123.8181",
+            "650.124.1224",
+            "650.501.1876",
+            "515.127.4566",
+            "515.123.8080"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "phone_number"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"phone_number\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"phone_number\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"phone_number\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "phone_number",
+          "max_value": 34,
+          "min_value": 34,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "phone_number"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"phone_number\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"phone_number\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"phone_number\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "phone_number",
+          "max_value": 1.0,
+          "min_value": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "phone_number"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"phone_number\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"phone_number\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"phone_number\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "phone_number",
+          "max_value": 1.0,
+          "min_value": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "phone_number"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"first_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"first_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"first_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "first_name"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "first_name"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"first_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"first_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"first_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "first_name",
+          "mostly": 1.0,
+          "value_set": [
+            "Adam",
+            "David",
+            "Susan",
+            "Sigal",
+            "Jose Manuel",
+            "Luis",
+            "Alexander",
+            "Hermann",
+            "Karen",
+            "William",
+            "Jonathon",
+            "Sarah",
+            "Matthew",
+            "Pat",
+            "Bruce",
+            "Lex",
+            "Steven",
+            "Charles",
+            "John",
+            "Michael",
+            "Shanta",
+            "Daniel",
+            "Shelli",
+            "Payam",
+            "Britney",
+            "Guy",
+            "Irene",
+            "Jennifer",
+            "Nancy",
+            "Diana",
+            "Den",
+            "Valli",
+            "Neena",
+            "Ismael",
+            "Kimberely",
+            "Jack",
+            "Shelley"
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "first_name"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"first_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"first_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"first_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "first_name",
+          "max_value": 37,
+          "min_value": 37,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "first_name"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"first_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"first_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"first_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "first_name",
+          "max_value": 0.925,
+          "min_value": 0.925,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "first_name"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"first_name\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"first_name\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"first_name\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "first_name",
+          "max_value": 0.925,
+          "min_value": 0.925,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "first_name"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"hire_date\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"hire_date\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"hire_date\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "hire_date"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "hire_date"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"hire_date\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"hire_date\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"hire_date\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "hire_date",
+          "max_value": "1987-06-17T00:00:00",
+          "min_value": "1987-06-17T00:00:00",
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "hire_date"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"hire_date\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"hire_date\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"hire_date\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "hire_date",
+          "max_value": "2000-01-04T00:00:00",
+          "min_value": "2000-01-04T00:00:00",
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "hire_date"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"hire_date\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"hire_date\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"hire_date\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "hire_date",
+          "max_value": "2000-01-04T00:00:00",
+          "min_value": "1987-06-17T00:00:00",
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "hire_date"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "hire_date"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"hire_date\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"hire_date\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"hire_date\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "hire_date",
+          "max_value": 37,
+          "min_value": 37,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "hire_date"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"hire_date\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"hire_date\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"hire_date\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "hire_date",
+          "max_value": 0.925,
+          "min_value": 0.925,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "hire_date"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"hire_date\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"hire_date\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"hire_date\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "hire_date",
+          "max_value": 0.925,
+          "min_value": 0.925,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "hire_date"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary"
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column_values.nonnull.unexpected_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 2500.0,
+          "min_value": 2500.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.min",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 124000.0,
+          "min_value": 124000.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.max",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 124000.0,
+          "min_value": 2500.0,
+          "mostly": 1.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "column_max_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "salary"
+                },
+                "metric_name": "column.max",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            },
+            "column_min_values_range_estimator": {
+              "metric_configuration": {
+                "domain_kwargs": {
+                  "column": "salary"
+                },
+                "metric_name": "column.min",
+                "metric_value_kwargs": null
+              },
+              "num_batches": 1
+            }
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "(pyodbc.ProgrammingError) ('42S22', \"[42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Statement(s) could not be prepared. (8180)\")\n[SQL: SELECT percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_1, percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_2, percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_3 \nFROM [#gx_temp_e0a033c9]]\n[parameters: (0.25, 0.5, 0.75)]\n(Background on this error at: https://sqlalche.me/e/14/f405)",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1905, in _execute_context\n    self.dialect.do_execute(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 736, in do_execute\n    cursor.execute(statement, parameters)\npyodbc.ProgrammingError: ('42S22', \"[42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Statement(s) could not be prepared. (8180)\")\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 50, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metrics\\column_quantile_values.py\", line 87, in _sqlalchemy\n    return _get_column_quantiles_mssql(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metrics\\column_quantile_values.py\", line 211, in _get_column_quantiles_mssql\n    raise pe\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metrics\\column_quantile_values.py\", line 202, in _get_column_quantiles_mssql\n    quantiles_results: Row = sqlalchemy_engine.execute(quantiles_query).fetchone()\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1385, in execute\n    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\sql\\elements.py\", line 334, in _execute_on_connection\n    return connection._execute_clauseelement(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1577, in _execute_clauseelement\n    ret = self._execute_context(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1948, in _execute_context\n    self._handle_dbapi_exception(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 2129, in _handle_dbapi_exception\n    util.raise_(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\util\\compat.py\", line 211, in raise_\n    raise exception\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\base.py\", line 1905, in _execute_context\n    self.dialect.do_execute(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\sqlalchemy\\engine\\default.py\", line 736, in do_execute\n    cursor.execute(statement, parameters)\nsqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ('42S22', \"[42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Statement(s) could not be prepared. (8180)\")\n[SQL: SELECT percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_1, percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_2, percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_3 \nFROM [#gx_temp_e0a033c9]]\n[parameters: (0.25, 0.5, 0.75)]\n(Background on this error at: https://sqlalche.me/e/14/f405)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: (pyodbc.ProgrammingError) ('42S22', \"[42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'salary'. (207); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]Statement(s) could not be prepared. (8180)\")\n[SQL: SELECT percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_1, percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_2, percentile_disc(?) WITHIN GROUP (ORDER BY salary ASC) OVER () AS anon_3 \nFROM [#gx_temp_e0a033c9]]\n[parameters: (0.25, 0.5, 0.75)]\n(Background on this error at: https://sqlalche.me/e/14/f405)\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "kwargs": {
+          "allow_relative_error": false,
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "quantile_ranges": {
+            "quantiles": [
+              0.25,
+              0.5,
+              0.75
+            ],
+            "value_ranges": [
+              [
+                4400.0,
+                4400.0
+              ],
+              [
+                7700.0,
+                7700.0
+              ],
+              [
+                9000.0,
+                9000.0
+              ]
+            ]
+          }
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.quantile_values",
+              "metric_value_kwargs": {
+                "allow_relative_error": false,
+                "quantiles": [
+                  0.25,
+                  0.5,
+                  0.75
+                ]
+              }
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 7750.0,
+          "min_value": 7750.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.median",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 10560.0,
+          "min_value": 10560.0,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.mean",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 18782.244752657174,
+          "min_value": 18782.244752657174,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.standard_deviation",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_stdev_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 18782.244752657174,
+          "min_value": 18782.244752657174,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.standard_deviation",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "mostly": 1.0,
+          "value_set": [
+            8200.0,
+            2700.0,
+            10000.0,
+            7700.0,
+            8600.0,
+            3100.0,
+            4000.0,
+            2600.0,
+            9000.0,
+            4400.0,
+            11000.0,
+            14000.0,
+            6200.0,
+            3900.0,
+            13500.0,
+            4800.0,
+            8000.0,
+            2500.0,
+            13000.0,
+            8400.0,
+            2900.0,
+            7000.0,
+            7900.0,
+            12000.0,
+            124000.0,
+            6500.0,
+            4200.0,
+            17000.0,
+            8300.0,
+            2800.0,
+            6000.0,
+            6900.0,
+            7800.0
+          ]
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.distinct_values",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1,
+            "parse_strings_as_datetimes": false
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_unique_value_count_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 33,
+          "min_value": 33,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.distinct_values.count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\column_aggregate_metric_provider.py\", line 168, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 0.825,
+          "min_value": 0.825,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": "Error: The column \"salary\" in BatchData does not exist.",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 545, in _process_direct_and_bundled_metric_computation_configurations\n    ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 90, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 173, in inner_func\n    column_name = get_dbms_compatible_column_names(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 675, in get_dbms_compatible_column_names\n    _verify_column_names_exist_and_get_normalized_typed_column_names_map(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\expectations\\metrics\\util.py\", line 754, in _verify_column_names_exist_and_get_normalized_typed_column_names_map\n    raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(\ngreat_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column \"salary\" in BatchData does not exist.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 276, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 280, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n  File \"C:\\Users\\Maryia_Makarava\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 549, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Error: The column \"salary\" in BatchData does not exist.\n",
+        "raised_exception": true
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column": "salary",
+          "max_value": 0.825,
+          "min_value": 0.825,
+          "strict_max": false,
+          "strict_min": false
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {
+                "column": "salary"
+              },
+              "metric_name": "column.unique_proportion",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "max_value": 40,
+          "min_value": 40
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {},
+              "metric_name": "table.row_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 25
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_set",
+        "kwargs": {
+          "batch_id": "41495314bf972c3ece7de289a5a1adf8",
+          "column_set": [
+            "phone_number",
+            "email",
+            "first_name",
+            "employee_id",
+            "salary",
+            "last_name",
+            "manager_id",
+            "hire_date",
+            "job_id",
+            "department_id"
+          ],
+          "exact_match": null
+        },
+        "meta": {
+          "profiler_details": {
+            "success_ratio": 1.0
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "mismatched": {
+            "missing": [
+              "department_id",
+              "email",
+              "employee_id",
+              "first_name",
+              "hire_date",
+              "job_id",
+              "last_name",
+              "manager_id",
+              "phone_number",
+              "salary"
+            ],
+            "unexpected": [
+              "country_id",
+              "country_name",
+              "region_id"
+            ]
+          }
+        },
+        "observed_value": [
+          "country_id",
+          "country_name",
+          "region_id"
+        ]
+      },
+      "success": false
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 44,
+    "success_percent": 0.0,
+    "successful_expectations": 0,
+    "unsuccessful_expectations": 44
+  },
+  "success": false
+}
